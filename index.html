@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gustavo Soares Pinto — Academic CV</title>
+<meta name="description" content="Gustavo Soares Pinto — MSc candidate in Applied Physics (UNILA). Quantum computing and machine learning for energy systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --roxo: #5E284E;
+    --roxo-claro: #F4EEF3;
+    --verde: #0B7A6F;
+    --tinta: #2B2230;
+    --cinza: #5F5866;
+    --linha: #E3D8E0;
+    --fundo: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--fundo); color: var(--tinta);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px; line-height: 1.6;
+  }
+  a { color: var(--roxo); }
+  a:hover { color: var(--verde); }
+  .topo { background: var(--roxo); color: #fff; padding: 48px 20px 40px; }
+  .topo .caixa, main { max-width: 860px; margin: 0 auto; }
+  h1 { margin: 0; font-size: clamp(30px, 6vw, 44px); line-height: 1.1; letter-spacing: -0.01em; }
+  .subtitulo { margin: 10px 0 4px; font-size: 18px; color: #F1E6EE; }
+  .local { margin: 0; font-size: 15px; color: #D9C6D4; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .links a {
+    display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 10px 16px;
+    border-radius: 999px; background: rgba(255,255,255,0.12); color: #fff; text-decoration: none;
+    font-weight: 500; font-size: 15px; border: 1px solid rgba(255,255,255,0.25);
+  }
+  .links a:hover { background: rgba(255,255,255,0.22); color: #fff; }
+  .links a.cv { background: #fff; color: var(--roxo); border-color: #fff; font-weight: 700; }
+  main { padding: 8px 20px 56px; }
+  section { padding: 28px 0 8px; border-bottom: 1px solid var(--linha); }
+  section:last-of-type { border-bottom: 0; }
+  h2 { margin: 0 0 14px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--roxo); }
+  .item { margin: 0 0 22px; }
+  .item h3 { margin: 0; font-size: 17px; line-height: 1.35; }
+  .meta { margin: 2px 0 6px; color: var(--cinza); font-size: 14px; }
+  ul { margin: 6px 0 0; padding-left: 20px; }
+  li { margin: 4px 0; }
+  .destaque { background: var(--roxo-claro); border-radius: 14px; padding: 20px 22px; margin: 4px 0 24px; }
+  .destaque h3 { color: var(--roxo); }
+  .numeros { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+  .numeros div { background: #fff; border-radius: 10px; padding: 12px; }
+  .numeros b { display: block; font-size: 22px; color: var(--verde); line-height: 1.2; }
+  .numeros span { font-size: 13px; color: var(--cinza); line-height: 1.35; display: block; }
+  .pub { margin: 0 0 12px; }
+  .pub .status { display: inline-block; font-size: 12px; font-weight: 600; color: var(--verde); background: #E6F3F1;
+                 border-radius: 6px; padding: 1px 8px; margin-left: 4px; white-space: nowrap; }
+  .duas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+  footer { max-width: 860px; margin: 0 auto; padding: 0 20px 40px; color: var(--cinza); font-size: 13px; }
+  @media (max-width: 640px) {
+    .duas, .numeros { grid-template-columns: minmax(0, 1fr); }
+    .topo { padding-top: 36px; }
+  }
+  @media print {
+    .links, footer .imprimir-oculto { display: none; }
+    .topo { background: #fff; color: var(--tinta); padding: 0 0 12px; border-bottom: 2px solid var(--roxo); }
+    .subtitulo, .local { color: var(--cinza); }
+    h1 { color: var(--roxo); font-size: 28px; }
+    body { font-size: 9.5pt; line-height: 1.42; }
+    .subtitulo { font-size: 11pt; margin-top: 4px; }
+    .local { font-size: 9.5pt; }
+    main { padding: 0; }
+    section { padding: 8px 0 0; }
+    h2 { margin-bottom: 6px; font-size: 9pt; break-after: avoid; page-break-after: avoid; }
+    .item h3 { break-after: avoid; }
+    .item { margin-bottom: 9px; }
+    .item h3 { font-size: 10.5pt; }
+    .meta { margin: 0 0 2px; font-size: 9pt; }
+    li { margin: 1px 0; }
+    .pub { margin-bottom: 5px; }
+    .destaque { padding: 10px 14px; margin-bottom: 8px; border-radius: 8px; }
+    .destaque p { margin: 4px 0; }
+    .numeros { margin-top: 6px; gap: 8px; }
+    .numeros div { padding: 6px 8px; }
+    .numeros b { font-size: 12pt; }
+    .numeros span { font-size: 8.5pt; }
+    .item, .pub, .destaque { break-inside: avoid; }
+    footer { padding: 8px 0 0; }
+    .contato-impresso { display: block !important; }
+  }
+  .contato-impresso { display: none; font-size: 10pt; color: var(--cinza); margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="caixa">
+    <h1>Gustavo Soares Pinto</h1>
+    <p class="subtitulo">MSc Candidate in Applied Physics · Quantum Computing &amp; Machine Learning for Energy Systems</p>
+    <p class="local">Universidade Federal da Integração Latino-Americana (UNILA) · Itaipu Parquetec · Foz do Iguaçu, Brazil</p>
+    <p class="contato-impresso">soaresgustavo.p@gmail.com · nerdsoares.github.io/Gustavo_Soares · orcid.org/0009-0009-6474-9233 · linkedin.com/in/soaresgustavop</p>
+    <nav class="links" aria-label="Contact and profiles">
+      <a class="cv" href="cv.pdf">Download CV (PDF)</a>
+      <a href="mailto:soaresgustavo.p@gmail.com">Email</a>
+      <a href="https://orcid.org/0009-0009-6474-9233">ORCID</a>
+      <a href="https://scholar.google.com.br/citations?user=NQt9cwUAAAAJ">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/soaresgustavop/">LinkedIn</a>
+      <a href="https://github.com/NerdSoares">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="research">
+  <h2>Research interests</h2>
+  <p>Quantum computing for optimization and machine learning on near-term (NISQ) devices — QUBO and Ising formulations,
+  quantum annealing, QAOA and variational quantum algorithms, and quantum machine learning — applied to the modelling,
+  forecasting and operation of energy systems, including their deployment for real-time inference on edge hardware.
+  Secondary interests in deep learning for multivariate industrial time series and in techno-economic assessment of
+  hydrogen technologies.</p>
+</section>
+
+<section id="current">
+  <h2>Current project</h2>
+  <div class="destaque">
+    <h3>Mapping Green Hydrogen Infrastructure Planning onto NISQ Devices: A QAOA Study of Electrolyser Siting</h3>
+    <p class="meta">Poster · School on Quantum Simulation in the NISQ era · ICTP-SAIFR / IFT-UNESP, São Paulo · Nov 2026</p>
+    <p>Where should electrolyser plants go in Brazil’s Northeast? The siting problem is built entirely from open Brazilian
+    data (ONS curtailment, OpenStreetMap substations, road distances, electricity prices), encoded as a 16-qubit QUBO and
+    solved with QAOA in simulation and on IBM quantum hardware. The study maps which structural feature binds first:
+    QAOA learns the constraints, but the cost differences between good plans are too small, inside the penalty-dominated
+    energy scale, for the circuit to prefer the best one.</p>
+    <div class="numeros">
+      <div><b>16 qubits</b><span>4 candidate sites × 3 demand hubs</span></div>
+      <div><b>~140×</b><span>valid plans found above chance (simulation)</span></div>
+      <div><b>21× / 20× / 9×</b><span>on IBM Heron (ibm_kingston), 1–3 layers</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="item">
+    <h3>Master of Science in Applied Physics</h3>
+    <p class="meta">UNILA · 2025 – present · expected defense Mar–Apr 2027</p>
+    <ul>
+      <li>Dissertation (provisional): <i>Edge AI and Quantum Machine Learning for Real-Time Monitoring of Green Hydrogen Systems</i>. Advisor: Prof. Dr. Raphael Fortes Infante Gomes.</li>
+      <li>Research focus: quantum machine learning applied to energy systems, with real-time inference on embedded hardware (Raspberry Pi).</li>
+      <li>Full merit-based graduate fellowship from CAPES (Brazilian Ministry of Education), awarded through competitive national selection.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <h3>Bachelor of Science in Engineering Physics</h3>
+    <p class="meta">UNILA · 2019 – 2025</p>
+    <ul>
+      <li>Thesis: development of a pilot algorithm for predicting the hydrogen outlet temperature in the production plant at Itaipu Parquetec — a hybrid quantum–classical study benchmarking a quantum LSTM (QLSTM) against classical recurrent architectures on operational data from an alkaline electrolyzer. Advisor: Prof. Dr. Raphael Fortes Infante Gomes.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Research experience</h2>
+  <div class="item">
+    <h3>Machine Learning Research Fellow</h3>
+    <p class="meta">Itaipu Parquetec — Center for Hydrogen Technologies · 2024 – present</p>
+    <ul>
+      <li>Deep-learning models for predictive maintenance and operational forecasting of an alkaline water electrolyzer (LSTM and recurrent architectures in PyTorch, multivariate plant telemetry).</li>
+      <li>Extended the forecasting pipeline to hybrid quantum–classical models, benchmarking quantum LSTM architectures against classical counterparts on the same dataset.</li>
+      <li>Deep reinforcement learning for automated feature selection, with Optuna-based hyperparameter search, to forecast temperature, pressure and stack voltage.</li>
+      <li>Designed and deployed a real-time predictive operations dashboard used by plant staff for decision support.</li>
+      <li>Co-developed the techno-economic assessment of a prototype hydrogen-powered boat and contributed to its assembly; supported assembly and integration of a hydrogen power generator, with technical and economic viability models.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <h3>Undergraduate Researcher — Self-Powered Systems</h3>
+    <p class="meta">UNILA · 2021 – 2022</p>
+    <ul><li>Self-powered acquisition system for autonomous sensors; programmed pyranometers and pyrheliometers for solar-irradiance data acquisition and processing.</li></ul>
+  </div>
+  <div class="item">
+    <h3>Undergraduate Researcher — Astronautics</h3>
+    <p class="meta">UNILA · 2020 – 2021</p>
+    <ul><li>Aerodynamic modelling of rocket components (nose cone and fins) in Autodesk Inventor, followed by physical prototyping.</li></ul>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <p class="meta" style="margin-bottom:10px">Journal articles</p>
+  <p class="pub">Pinto, G. S.; Silva, M. A.; Gomes, R. F. I.; et al. “Machine Learning Applied to Predictive Maintenance in Alkaline Electrolyzers.” <i>Matéria (Rio de Janeiro)</i>, 2026. <span class="status">submitted</span></p>
+  <p class="pub">Pinto, G. S.; Gomes, R. F. I. “Quantum and Classical Recurrent Models for Operational Forecasting in Alkaline Water Electrolysis.” 2026. <span class="status">in preparation</span></p>
+  <p class="pub">Pinto, G. S.; Gomes, R. F. I. “Machine Learning and Quantum Machine Learning for Predictive Maintenance in Hydrogen Production: A Systematic Review.” 2026. <span class="status">in preparation</span></p>
+  <p class="meta" style="margin:18px 0 10px">Conference contributions</p>
+  <p class="pub">Pinto, G. S. et al. “Mapping Green Hydrogen Infrastructure Planning onto NISQ Devices: A QAOA Study of Electrolyser Siting.” School on Quantum Simulation in the NISQ era, ICTP-SAIFR / IFT-UNESP, São Paulo, Brazil, Nov 2026. (Poster)</p>
+  <p class="pub">Pinto, G. S.; Maciel, J. N.; Gomes, R. F. I. “Predictive Maintenance in Hydrogen Production: A Systematic Analysis with Traditional and Quantum Machine Learning.” 2nd Meeting of Applied Physics at the Triple Frontier, Foz do Iguaçu, Brazil, Nov 2025. (Poster)</p>
+  <p class="pub">Pinto, G. S.; Silva, M. A.; Gomes, R. F. I.; Teogenes, A. T.; Quispe, A. A.; Isernhagen, E. K.; Cantane, D. A.; Pereira, A. C. “Machine Learning Applied to Predictive Maintenance in Electrolyzers.” 4th Brazilian Hydrogen Congress, Brasília, Brazil, Oct 2025. (Poster)</p>
+</section>
+
+<section id="teaching">
+  <h2>Teaching &amp; outreach</h2>
+  <div class="item">
+    <h3>Outreach Instructor — Smart Solar Collector</h3>
+    <p class="meta">UNILA · 2023 – 2024</p>
+    <ul><li>Designed and taught hands-on classes using Arduino and relay circuits, covering foundational physics and the operation of low-cost smart solar collectors.</li></ul>
+  </div>
+  <div class="item">
+    <h3>Outreach Project Member — Educational Materials</h3>
+    <p class="meta">UNILA · 2022 – 2023</p>
+    <ul><li>Designed layouts and specified material properties for educational cards teaching the physical concepts of metallic materials.</li></ul>
+  </div>
+</section>
+
+<section id="awards">
+  <h2>Awards &amp; leadership</h2>
+  <div class="item"><h3>CAPES Graduate Fellowship</h3><p class="meta">Brazilian Ministry of Education · 2025 – present</p></div>
+  <div class="item"><h3>Honorable Mention — V SIEPE</h3><p class="meta">Week of Teaching, Research and Extension · Foz do Iguaçu · 2023</p></div>
+  <div class="item"><h3>Vice President — Academic Center of Engineering Physics (CAEF)</h3><p class="meta">Apr 2024 – Apr 2025</p></div>
+</section>
+
+<section id="skills">
+  <h2>Skills &amp; coursework</h2>
+  <div class="duas">
+    <div class="item">
+      <h3>Technical skills</h3>
+      <ul>
+        <li><b>Quantum computing:</b> Qiskit, PennyLane, D-Wave Ocean; QUBO/Ising formulations, quantum annealing, QAOA, variational circuits, QML (QLSTM, QSVM)</li>
+        <li><b>Deep learning:</b> PyTorch, TensorFlow, LSTM and recurrent architectures, deep reinforcement learning, Optuna</li>
+        <li><b>Data &amp; tooling:</b> Python, LaTeX, scikit-learn, pandas, NumPy, Git</li>
+        <li><b>Engineering:</b> predictive maintenance, techno-economic assessment, hydrogen and electrolysis systems, microcontrollers, Arduino, Autodesk Inventor</li>
+      </ul>
+    </div>
+    <div class="item">
+      <h3>Graduate coursework</h3>
+      <ul>
+        <li>Quantum Computing I &amp; II (2025–2026)</li>
+        <li>Quantum Mechanics</li>
+        <li>Artificial Intelligence Applied to Scientific Research</li>
+      </ul>
+      <h3 style="margin-top:16px">Languages</h3>
+      <ul>
+        <li>Portuguese — native</li>
+        <li>English — C1</li>
+        <li>Spanish — C1</li>
+        <li>Mandarin — A1</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Last updated: November 2026 · References available upon request.</p>
+</footer>
+
+</body>
+</html>
